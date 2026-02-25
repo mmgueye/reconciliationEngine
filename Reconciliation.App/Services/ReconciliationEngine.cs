@@ -4,9 +4,9 @@ namespace Reconciliation.App.Services
 {
     public class ReconciliationEngine
     {
-        public List<Matching> Match(List<Transaction> bankTransactions, List<Transaction> accountingTransactions)
+        public Report Match(List<Transaction> bankTransactions, List<Transaction> accountingTransactions)
         {
-            var results = new List<Matching>();
+            var report = new Report();
             var usedAccounting = new HashSet<int>();
 
             foreach (var bank in bankTransactions)
@@ -39,7 +39,7 @@ namespace Reconciliation.App.Services
                                  ordered[1].dateDiff == best.dateDiff &&
                                  ordered[1].amountDiff == best.amountDiff;
 
-                results.Add(new Matching
+                report.Matches.Add(new Matching
                 {
                     BankId = bank.Id,
                     AccountingId = best.transaction.Id,
@@ -50,8 +50,15 @@ namespace Reconciliation.App.Services
 
                 usedAccounting.Add(best.transaction.Id);
             }
+            report.UnmatchedBank = bankTransactions
+            .Where(b => !report.Matches.Any(m => m.BankId == b.Id))
+            .ToList();
 
-            return results;
+            report.UnmatchedAccounting = accountingTransactions
+                .Where(a => !report.Matches.Any(m => m.AccountingId == a.Id))
+                .ToList();
+
+            return report;
         }
 
         private (Transaction transaction, int score, MatchRule rule, int dateDiff, decimal amountDiff)? TryMatch(

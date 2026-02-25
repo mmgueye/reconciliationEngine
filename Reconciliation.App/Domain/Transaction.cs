@@ -4,7 +4,7 @@ namespace Reconciliation.App.Domain
     public enum TransactionType
     {
         Bank,
-        account
+        Account
     }
 
     public class Transaction

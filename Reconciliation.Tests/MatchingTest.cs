@@ -15,17 +15,17 @@ namespace Reconciliation.Tests
                 new Transaction { Id = 1, Date = new DateTime(2023,10,1), Amount = -50 }
             };
 
-            var acc = new List<Transaction>
+            var account= new List<Transaction>
             {
                 new Transaction { Id = 10, Date = new DateTime(2023,10,1), Amount = -50 }
             };
 
             var engine = new ReconciliationEngine();
-            var result = engine.Match(bank, acc);
+            var report = engine.Match(bank, account);
 
-            Assert.AreEqual(1, result.Count);
-            Assert.AreEqual(100, result[0].Score);
-            Assert.AreEqual(MatchRule.PerfectMatch, result[0].RuleApplied);
+            Assert.AreEqual(1, report.Matches.Count);
+            Assert.AreEqual(100, report.Matches[0].Score);
+            Assert.AreEqual(MatchRule.PerfectMatch, report.Matches[0].RuleApplied);
         }
 
         [TestMethod]
@@ -36,16 +36,16 @@ namespace Reconciliation.Tests
                 new Transaction { Id = 1, Date = new DateTime(2023,10,2), Amount = -50 }
             };
 
-            var acc = new List<Transaction>
+            var account= new List<Transaction>
             {
                 new Transaction { Id = 10, Date = new DateTime(2023,10,1), Amount = -50 }
             };
 
             var engine = new ReconciliationEngine();
-            var result = engine.Match(bank, acc);
+            var report = engine.Match(bank, account);
 
-            Assert.AreEqual(85, result[0].Score);
-            Assert.AreEqual(MatchRule.DateTolerance, result[0].RuleApplied);
+            Assert.AreEqual(85, report.Matches[0].Score);
+            Assert.AreEqual(MatchRule.DateTolerance, report.Matches[0].RuleApplied);
         }
 
         [TestMethod]
@@ -56,16 +56,16 @@ namespace Reconciliation.Tests
                 new Transaction { Id = 1, Date = new DateTime(2023,10,1), Amount = -50 }
             };
 
-            var acc = new List<Transaction>
+            var account= new List<Transaction>
             {
                 new Transaction { Id = 10, Date = new DateTime(2023,10,1), Amount = -50 },
                 new Transaction { Id = 11, Date = new DateTime(2023,10,1), Amount = -50 }
             };
 
             var engine = new ReconciliationEngine();
-            var result = engine.Match(bank, acc);
+            var report = engine.Match(bank, account);
 
-            Assert.IsTrue(result[0].IsAmbiguous);
+            Assert.IsTrue(report.Matches[0].IsAmbiguous);
         }
 
     }
