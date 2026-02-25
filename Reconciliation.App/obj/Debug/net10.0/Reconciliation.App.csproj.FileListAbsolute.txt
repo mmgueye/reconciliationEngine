@@ -12,3 +12,4 @@
 /Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.pdb
 /Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.genruntimeconfig.cache
 /Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/ref/Reconciliation.App.dll
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.sourcelink.json

@@ -272,3 +272,4 @@
 /Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.Tests/obj/Debug/net10.0/Reconciliation.Tests.pdb
 /Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.Tests/obj/Debug/net10.0/Reconciliation.Tests.genruntimeconfig.cache
 /Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.Tests/obj/Debug/net10.0/ref/Reconciliation.Tests.dll
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.Tests/obj/Debug/net10.0/Reconciliation.Tests.sourcelink.json
