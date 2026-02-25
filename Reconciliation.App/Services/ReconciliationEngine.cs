@@ -4,8 +4,17 @@ namespace Reconciliation.App.Services
 {
     public class ReconciliationEngine
     {
+         private readonly Logger _logger;
+
+    public ReconciliationEngine(Logger logger)
+    {
+        _logger = logger;
+    }
+
         public Report Match(List<Transaction> bankTransactions, List<Transaction> accountingTransactions)
         {
+            _logger.Info($"Début du matching : {bankTransactions.Count} banques, {accountingTransactions.Count} compta");
+
             var report = new Report();
             var usedAccounting = new HashSet<int>();
 
@@ -23,7 +32,10 @@ namespace Reconciliation.App.Services
                 }
 
                 if (candidates.Count == 0)
+                {
+                    _logger.Warn($"Transaction bancaire {bank.Id} non matchée");
                     continue;
+                }
 
                 var ordered = candidates
                     .OrderByDescending(c => c.score)
@@ -48,6 +60,8 @@ namespace Reconciliation.App.Services
                     IsAmbiguous = ambiguous
                 });
 
+                _logger.Info($"Match Banque {bank.Id} → Compta {best.transaction.Id}, Score {best.score}, Ambigu: {ambiguous}");
+
                 usedAccounting.Add(best.transaction.Id);
             }
             report.UnmatchedBank = bankTransactions
@@ -57,6 +71,8 @@ namespace Reconciliation.App.Services
             report.UnmatchedAccounting = accountingTransactions
                 .Where(a => !report.Matches.Any(m => m.AccountingId == a.Id))
                 .ToList();
+       
+            _logger.Info($"Fin du matching : {report.Matches.Count} matches, {report.UnmatchedBank.Count} non matchées banques, {report.UnmatchedAccounting.Count} non matchées compta");
 
             return report;
         }

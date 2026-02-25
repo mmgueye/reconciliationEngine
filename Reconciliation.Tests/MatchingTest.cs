@@ -19,8 +19,9 @@ namespace Reconciliation.Tests
             {
                 new Transaction { Id = 10, Date = new DateTime(2023,10,1), Amount = -50 }
             };
+            var logger = new Logger("test_logs.txt");
 
-            var engine = new ReconciliationEngine();
+            var engine = new ReconciliationEngine(logger);
             var report = engine.Match(bank, account);
 
             Assert.AreEqual(1, report.Matches.Count);
@@ -40,8 +41,8 @@ namespace Reconciliation.Tests
             {
                 new Transaction { Id = 10, Date = new DateTime(2023,10,1), Amount = -50 }
             };
-
-            var engine = new ReconciliationEngine();
+            var logger = new Logger("test_logs.txt");
+            var engine = new ReconciliationEngine(logger);
             var report = engine.Match(bank, account);
 
             Assert.AreEqual(85, report.Matches[0].Score);
@@ -61,8 +62,8 @@ namespace Reconciliation.Tests
                 new Transaction { Id = 10, Date = new DateTime(2023,10,1), Amount = -50 },
                 new Transaction { Id = 11, Date = new DateTime(2023,10,1), Amount = -50 }
             };
-
-            var engine = new ReconciliationEngine();
+            var logger = new Logger("test_logs.txt");
+            var engine = new ReconciliationEngine(logger);
             var report = engine.Match(bank, account);
 
             Assert.IsTrue(report.Matches[0].IsAmbiguous);

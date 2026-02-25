@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reconciliation.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90ba4b15d1be01ffab2e2d8b65be2accd517af30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5ff9d3f1493bf12497509bf6cc574a8c041ec35")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reconciliation.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reconciliation.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
