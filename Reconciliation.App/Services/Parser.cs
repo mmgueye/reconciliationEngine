@@ -29,7 +29,12 @@ namespace Reconciliation.App.Services
                 LogError($"Empty file: {filePath}");
                 return transactions;
             }
-
+            
+            if (!lines[0].StartsWith("Date"))
+            {
+                LogError($"Missing or invalid header in file: {filePath}");
+                return transactions;
+            }
             int idCounter = 1;
 
             for (int i = 1; i < lines.Length; i++)
