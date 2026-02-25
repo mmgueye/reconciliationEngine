@@ -1,0 +1,14 @@
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/bin/Debug/net10.0/Reconciliation.App
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/bin/Debug/net10.0/Reconciliation.App.deps.json
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/bin/Debug/net10.0/Reconciliation.App.runtimeconfig.json
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/bin/Debug/net10.0/Reconciliation.App.dll
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/bin/Debug/net10.0/Reconciliation.App.pdb
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.AssemblyInfoInputs.cache
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.AssemblyInfo.cs
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.csproj.CoreCompileInputs.cache
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.dll
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/refint/Reconciliation.App.dll
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.pdb
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/Reconciliation.App.genruntimeconfig.cache
+/Users/mouhamadoumansour/Documents/test_ReconciliationEngine/Reconciliation.App/obj/Debug/net10.0/ref/Reconciliation.App.dll

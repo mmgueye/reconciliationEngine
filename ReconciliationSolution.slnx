@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Reconciliation.App/Reconciliation.App.csproj" />
+  <Project Path="Reconciliation.Tests/Reconciliation.Tests.csproj" />
+</Solution>
