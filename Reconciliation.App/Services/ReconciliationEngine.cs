@@ -60,8 +60,11 @@ namespace Reconciliation.App.Services
                     IsAmbiguous = ambiguous
                 });
 
-                _logger.Info($"Match Banque {bank.Id} → Compta {best.transaction.Id}, Score {best.score}, Ambigu: {ambiguous}");
-
+                if (ambiguous)
+                    _logger.Warn($"Ambiguous match BankId={bank.Id}");
+                else
+                    _logger.Info($"Match BankId={bank.Id} AccountingId={best.transaction.Id} Score={best.score}");
+                
                 usedAccounting.Add(best.transaction.Id);
             }
             report.UnmatchedBank = bankTransactions
