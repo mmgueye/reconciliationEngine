@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reconciliation.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c857fba70cd9cde901865ab75fe38dd021f73d51")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e0a4bf4726e91248425ef8bcde9b1e780853278")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reconciliation.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reconciliation.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
